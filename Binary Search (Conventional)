@@ -1,0 +1,24 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+int main(){
+    int n, tar;
+    cin >> n >> tar;
+    int a[n];
+    for(int i = 0; i < n; i++) cin >> a[i];
+
+
+    int l = 0, r = n-1, mid, sol;
+    while(l <= r){
+        mid = l + (r-l)/2;
+        if(a[mid] > tar){
+            r = mid-1;
+        }
+        else{
+            sol = mid; //if necessary
+            l = mid+1;
+        }
+    }
+
+}
